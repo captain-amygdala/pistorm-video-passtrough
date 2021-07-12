@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/crosslink/kain/src/bitstream.hpp
+string
+-
+vector
+-
+array
+-
+fstream
+-
+
+/home/pi/crosslink/kain/src/endian.hpp
+cstdint
+-
+
+/home/pi/crosslink/kain/src/i2c.hpp
+string
+-
+vector
+-
+
+/home/pi/crosslink/kain/src/main.cpp
+cstdio
+-
+string
+-
+optional
+-
+thread
+-
+bitstream.hpp
+/home/pi/crosslink/kain/src/bitstream.hpp
+i2c.hpp
+/home/pi/crosslink/kain/src/i2c.hpp
+endian.hpp
+/home/pi/crosslink/kain/src/endian.hpp
+gpiod.h
+-
+

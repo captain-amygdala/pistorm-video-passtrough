@@ -1,0 +1,3 @@
+/home/pi/pi-i2c/build/CMakeFiles/rebuild_cache.dir
+/home/pi/pi-i2c/build/CMakeFiles/i2c_updater.dir
+/home/pi/pi-i2c/build/CMakeFiles/edit_cache.dir

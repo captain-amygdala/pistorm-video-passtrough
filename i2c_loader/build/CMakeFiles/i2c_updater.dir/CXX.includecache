@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/pi-i2c/src/bitstream.hpp
+string
+-
+vector
+-
+array
+-
+fstream
+-
+
+/home/pi/pi-i2c/src/endian.hpp
+cstdint
+-
+
+/home/pi/pi-i2c/src/i2c.hpp
+string
+-
+vector
+-
+
+/home/pi/pi-i2c/src/main.cpp
+cstdio
+-
+string
+-
+optional
+-
+thread
+-
+bitstream.hpp
+/home/pi/pi-i2c/src/bitstream.hpp
+i2c.hpp
+/home/pi/pi-i2c/src/i2c.hpp
+endian.hpp
+/home/pi/pi-i2c/src/endian.hpp
+

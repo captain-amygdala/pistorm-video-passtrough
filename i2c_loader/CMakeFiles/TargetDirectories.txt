@@ -1,0 +1,3 @@
+/home/pi/crosslink/kain/CMakeFiles/rebuild_cache.dir
+/home/pi/crosslink/kain/CMakeFiles/i2c_updater.dir
+/home/pi/crosslink/kain/CMakeFiles/edit_cache.dir

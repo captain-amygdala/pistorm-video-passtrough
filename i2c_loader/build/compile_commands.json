@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/pi/pi-i2c/build",
+  "command": "/bin/g++-8    -g   -Wall -std=gnu++17 -o CMakeFiles/i2c_updater.dir/src/bitstream.cpp.o -c /home/pi/pi-i2c/src/bitstream.cpp",
+  "file": "/home/pi/pi-i2c/src/bitstream.cpp"
+},
+{
+  "directory": "/home/pi/pi-i2c/build",
+  "command": "/bin/g++-8    -g   -Wall -std=gnu++17 -o CMakeFiles/i2c_updater.dir/src/i2c.cpp.o -c /home/pi/pi-i2c/src/i2c.cpp",
+  "file": "/home/pi/pi-i2c/src/i2c.cpp"
+},
+{
+  "directory": "/home/pi/pi-i2c/build",
+  "command": "/bin/g++-8    -g   -Wall -std=gnu++17 -o CMakeFiles/i2c_updater.dir/src/main.cpp.o -c /home/pi/pi-i2c/src/main.cpp",
+  "file": "/home/pi/pi-i2c/src/main.cpp"
+}
+]

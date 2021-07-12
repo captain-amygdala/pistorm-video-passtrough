@@ -1,0 +1,1 @@
+/bin/g++-8  -g   CMakeFiles/i2c_updater.dir/src/bitstream.cpp.o CMakeFiles/i2c_updater.dir/src/i2c.cpp.o CMakeFiles/i2c_updater.dir/src/main.cpp.o  -o i2c_updater 
