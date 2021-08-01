@@ -1998,41 +1998,29 @@ static int setup_mmal(struct device *dev, int nbufs, int do_encode, const char *
          param.hdr.size = sizeof(MMAL_DISPLAYREGION_T);
 
          //param.display_num = 2;//2 for HDMI0, 7 for HDMI1
-         param.set =  MMAL_DISPLAY_SET_LAYER;
-	 param.layer = 128;    //On top of most things
-	 param.set |= MMAL_DISPLAY_SET_FULLSCREEN;
-	 param.fullscreen = 1;
+        param.src_rect.x = 0;
+        param.src_rect.y =  0;
+        param.src_rect.width =720;
+        param.src_rect.height =320;
 
-        //status = mmal_port_parameter_set(port, &param.hdr);
-	status = mmal_port_parameter_set(render_port, &param.hdr);
+        param.dest_rect.x = 00;
+        param.dest_rect.y = 0;
+        param.dest_rect.width = 720;
+        param.dest_rect.height = 576;
+        param.set =  MMAL_DISPLAY_SET_LAYER;
+        param.layer = 128;    //On top of most things
+
+        param.set |= (MMAL_DISPLAY_SET_DEST_RECT|MMAL_DISPLAY_SET_SRC_RECT|MMAL_DISPLAY_SET_NOASPECT|MMAL_DISPLAY_SET_FULLSCREEN);
+        param.fullscreen = 0;
+        param.noaspect = 1;
+
+        status = mmal_port_parameter_set(render_port, &param.hdr);
 
          if (status != MMAL_SUCCESS && status != MMAL_ENOSYS)
          {
              print("Failed to set display\n");
              return -1;
          }
-
-
-        //MMAL_DISPLAYREGION_T param;
-        //param.hdr.id = MMAL_PARAMETER_DISPLAYREGION;
-        //param.hdr.size = sizeof(MMAL_DISPLAYREGION_T);
-
-        //param.set = MMAL_DISPLAY_SET_LAYER;
-        //param.layer = 128;    //On top of most things
-
-        //param.set |= MMAL_DISPLAY_SET_ALPHA;
-        //param.alpha = 255;    //0 = transparent, 255 = opaque
-
-        //param.set |= (MMAL_DISPLAY_SET_DEST_RECT | MMAL_DISPLAY_SET_FULLSCREEN);
-	//param.set = MMAL_DISPLAY_SET_FULLSCREEN;
-        //param.fullscreen = 1;
-        //param.dest_rect.x = 100;
-        //param.dest_rect.y = 200;
-        //param.dest_rect.width = 200;
-        //param.dest_rect.height = 200;
-        //mmal_port_parameter_set( dev->render->input[0], &param.hdr);
-
-//Claude Fullscreen end
 
 	memset(&fmt, 0, sizeof fmt);
 	fmt.type = dev->type;
